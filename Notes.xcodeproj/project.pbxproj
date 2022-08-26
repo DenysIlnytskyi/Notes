@@ -43,6 +43,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86A7105B28B91589003214BB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				86A7105928B8FCE4003214BB /* NewNotesTableViewController.swift */,
+				86E233FD28B7F64C00704744 /* NotesTableViewController.swift */,
+				8609AE1328B7FB8200FD4126 /* NotesTableViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		86A7105C28B915B5003214BB /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				86E233EF28B7F4AC00704744 /* Main.storyboard */,
+				86E233F428B7F4AC00704744 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		86A7105D28B915DF003214BB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8609AE1528B8D74700FD4126 /* NotesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86A7105E28B915EE003214BB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				86E233F228B7F4AC00704744 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		86A7105F28B91609003214BB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				86E233E928B7F4AC00704744 /* AppDelegate.swift */,
+				86E233EB28B7F4AC00704744 /* SceneDelegate.swift */,
+				86E233F728B7F4AC00704744 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		86E233DD28B7F4AC00704744 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +107,11 @@
 		86E233E828B7F4AC00704744 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
-				86E233E928B7F4AC00704744 /* AppDelegate.swift */,
-				8609AE1528B8D74700FD4126 /* NotesModel.swift */,
-				86E233EB28B7F4AC00704744 /* SceneDelegate.swift */,
-				86E233EF28B7F4AC00704744 /* Main.storyboard */,
-				86A7105928B8FCE4003214BB /* NewNotesTableViewController.swift */,
-				8609AE1328B7FB8200FD4126 /* NotesTableViewCell.swift */,
-				86E233FD28B7F64C00704744 /* NotesTableViewController.swift */,
-				86E233F228B7F4AC00704744 /* Assets.xcassets */,
-				86E233F428B7F4AC00704744 /* LaunchScreen.storyboard */,
-				86E233F728B7F4AC00704744 /* Info.plist */,
+				86A7105F28B91609003214BB /* App */,
+				86A7105D28B915DF003214BB /* Models */,
+				86A7105C28B915B5003214BB /* StoryBoards */,
+				86A7105B28B91589003214BB /* ViewControllers */,
+				86A7105E28B915EE003214BB /* Resources */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -301,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RB4GHHSS4P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = Notes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +370,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RB4GHHSS4P;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Notes/Info.plist;
+				INFOPLIST_FILE = Notes/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

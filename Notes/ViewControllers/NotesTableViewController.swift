@@ -42,9 +42,14 @@ class NotesTableViewController: UITableViewController {
         let sourceVC = segue.source as! NewNotesTableViewController
         let note = sourceVC.note
         
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            objects[selectedIndexPath.row] = note
+            tableView.reloadRows(at: [selectedIndexPath], with: .fade)
+        } else {
         let newIndexPath = IndexPath(row: objects.count, section: 0)
         objects.append(note)
         tableView.insertRows(at: [newIndexPath], with: .fade)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -61,7 +66,7 @@ class NotesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+      
         return 1
     }
 
