@@ -36,6 +36,27 @@ class NotesTableViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem
         
     }
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveSegue" else { return }
+        let sourceVC = segue.source as! NewNotesTableViewController
+        let note = sourceVC.note
+        
+        let newIndexPath = IndexPath(row: objects.count, section: 0)
+        objects.append(note)
+        tableView.insertRows(at: [newIndexPath], with: .fade)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        guard segue.identifier == "editNote" else { return }
+        let indexPath = tableView.indexPathForSelectedRow!
+        let note = objects[indexPath.row]
+        let navigationVC = segue.destination as! UINavigationController
+        let newNoteVC = navigationVC.topViewController as! NewNotesTableViewController
+        newNoteVC.note = note
+        newNoteVC.title = "Edit"
+    }
 
     // MARK: - Table view data source
 
